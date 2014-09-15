@@ -1,0 +1,11 @@
+---
+layout: default
+title: World King
+---
+<h2>{{page.title}}</h2>
+<p>Today is 9/24</p>
+<ul>
+    {% for post in site.posts %}
+        <li>{{post.date | date_to_string }}<a href="{{ site.basrurl}}{{ post.url}}">{{post.url}}</a></li>
+    {% endfor %}
+</ul>
