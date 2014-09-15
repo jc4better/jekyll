@@ -1,23 +1,2 @@
-markdown: kramdown
-permalink: /:year-:month-:day-:title/
-url: http://jc4better.github.io/
-exclude: ["CNAME", "test"]
-
+markdown: rdiscount
 pygments: true
-safe: true
-paginate: 20
-auto: true
-mathjax: true
-
-name: 饯行 by Nick
-about: "<span>探索这美好的世界.</span>"
-hor: Nick
-qq: 447172336
-email: jiangchuan1109@gmail.com
-
-beian: 
-cnzz: 
-baidu: 
-weibo: 
-google_analytics_id: 
-gauges_id: 

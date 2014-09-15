@@ -1,47 +1,15 @@
 ---
 layout: default
 ---
-<section class="meta">
-<span class="time">
-  <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
-</span>
-
-{% if page.categories.size != 0 %}
- | 
-<span class="categories">
-  分类
-  {% for cat in page.categories %}
-  <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
-  {% endfor %}
-</span>
-{% endif %}
-{% if page.tags.size != 0 %}
- | 
-<span class="tags">
-  标签
-  {% for tag in page.tags %}
-  <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
-  {% endfor %}
-</span>
-{% endif %}
-</section>
-<section class="post">
+<div id="post">
 {{ content }}
-</section>
-<section align="right">
-<br/>
-<span>
-	{% if page.previous %} 
-		<a href="{{ page.previous.url }}" class="pageNav">上一篇</a>
-    {% else %}
-		<a class="pageNavInvalid">上一篇</a>
-	{% endif %}
-	&nbsp;&nbsp;&nbsp;
-	{% if page.next %}
-		<a href="{{ page.next.url }}" class="pageNav">下一篇</a>
-    {% else %}
-		<a class="pageNavInvalid">下一篇</a>
-	{% endif %}
-</span>
-</section>
-{% include comments.html %}
+</div>
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
