@@ -73,5 +73,21 @@ pageTracker._trackPageview();
 </script>
 <!-- Google Analytics end -->
 
+<script src="http://makeithome.qiniudn.com/jquery.js">
+</script>
+<script type="text/javascript">
+$().ready(function(){
+$(document).keydown(function(event){
+  switch(event.keyCode){
+      case 74:
+        $(document).scrollTop($(document).scrollTop()+200);
+        break;
+      case 75:
+        $(document).scrollTop($(document).scrollTop()-400);
+	break;
+  }
+});
+});
+</script>
 </body>
 </html>
