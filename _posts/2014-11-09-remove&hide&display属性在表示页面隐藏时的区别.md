@@ -27,3 +27,5 @@ display none:
 style中的属性，对该属性进行操作达到的现实隐藏功能.
 另外display还有display:block，该元素将显示为块级元素，前后会带有换行符(w3cshool)
 类似还有table inline-table
+
+测试用的html(比较丑)<a href="http://makeithome.qiniudn.com/2014-11-10.html">Miyavi</a>
