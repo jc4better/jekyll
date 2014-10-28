@@ -9,14 +9,14 @@ jQuery.min.js v1.8.3
 remove:
 直接移除这个标签 在页面上不可见了(真正的不可见),页面也将无法再对这个对象进行获取,通过父节点/子节点等操作都是无法再获取该节点的(前面保存了的也会无效的)，即使你F12源码也是没有的。
 
-<% highlight html %>
+{% highlight html %}
 remove: function(e, t) {
     var n, r = 0;
     for (;(n = this[r]) != null; r++) 
         if (!e || v.filter(e, [n]).length)!t && n.nodeType === 1 && (v.cleanData(n.getElementsByTagName("*")), v.cleanData([n])), n.parentNode && n.parentNode.removeChild(n);
             return this
 },
-<% endhighlight %>
+{% endhighlight %}
 
 可以对一些对操作比较敏感的地方这样使用。如:用户要充值，需要对用户的证书检查，安装有证书才显示给他密码框进行后续操作。防止用户F12将style="display:none"强行改成inline继续操作。
 
